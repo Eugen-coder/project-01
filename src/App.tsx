@@ -5,15 +5,16 @@ import Goodbye from "./components/Goodbye/Goodbye";
 import Greeting from "./components/Greeting/Greeting";
 import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
+import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import ThankYou from "./components/ThankYou/ThankYou";
 import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
 
 function App() {
   return (
     <>
-    <WeightCalculator/>
+      <WeightCalculator />
       <Counter />
-      <PersonalGreeting/>
+      <PersonalGreeting />
       <Greeting name={"Evgenii"} age={18} />
       <Goodbye />
       <ThankYou />
@@ -25,6 +26,7 @@ function App() {
         name="Jeyms Bond"
         description="Agent007"
       />
+      <SpaceMissionForm />
     </>
   );
 }
