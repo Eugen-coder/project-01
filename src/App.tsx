@@ -1,13 +1,19 @@
 import "./App.css";
 import Card from "./components/Card/Card";
+import { Counter } from "./components/Counter/Counter";
 import Goodbye from "./components/Goodbye/Goodbye";
 import Greeting from "./components/Greeting/Greeting";
+import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import ThankYou from "./components/ThankYou/ThankYou";
+import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
 
 function App() {
   return (
     <>
+    <WeightCalculator/>
+      <Counter />
+      <PersonalGreeting/>
       <Greeting name={"Evgenii"} age={18} />
       <Goodbye />
       <ThankYou />
