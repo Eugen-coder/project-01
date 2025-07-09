@@ -1,6 +1,9 @@
 import "./App.css";
+import { AgePredictor } from "./components/AgePredictor/AgePredictor";
 import Card from "./components/Card/Card";
 import { Counter } from "./components/Counter/Counter";
+import Demo from "./components/Demo";
+import GenderResponse from "./components/GenderResponse/GenderResponse";
 import Goodbye from "./components/Goodbye/Goodbye";
 import Greeting from "./components/Greeting/Greeting";
 import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
@@ -12,6 +15,9 @@ import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
 function App() {
   return (
     <>
+      <GenderResponse />
+      <AgePredictor />
+      <Demo />
       <WeightCalculator />
       <Counter />
       <PersonalGreeting />
