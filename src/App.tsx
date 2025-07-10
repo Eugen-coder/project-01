@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { AgePredictor } from "./components/AgePredictor/AgePredictor";
 import Card from "./components/Card/Card";
@@ -11,10 +12,27 @@ import ProfileCard from "./components/ProfileCard/ProfileCard";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import ThankYou from "./components/ThankYou/ThankYou";
 import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
+import Registration from "./components/pages/Registration.tsx/Registration";
+import Home from "./components/pages/Home/Home";
+import NotFound from "./components/pages/NotFound/NotFound";
+import MainLayout from "./layout/MainLayout";
+import { ROUTES } from "./constants/routes";
 
 function App() {
   return (
     <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path={ROUTES.REGISTRATION} element={<Registration />} />
+            <Route path="/gender-predictor" element={<GenderResponse />} />
+            <Route path="/age-predictor" element={<AgePredictor />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <GenderResponse />
       <AgePredictor />
       <Demo />
