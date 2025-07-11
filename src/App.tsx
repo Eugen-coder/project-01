@@ -17,12 +17,16 @@ import Home from "./components/pages/Home/Home";
 import NotFound from "./components/pages/NotFound/NotFound";
 import MainLayout from "./layout/MainLayout";
 import { ROUTES } from "./constants/routes";
+import About from "./components/pages/About/About";
+import Contact from "./components/pages/Contact/Contact";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/about" element={<About />} />
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path={ROUTES.REGISTRATION} element={<Registration />} />
@@ -33,6 +37,8 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <Contact/>
+      <About />
       <GenderResponse />
       <AgePredictor />
       <Demo />

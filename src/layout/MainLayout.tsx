@@ -9,7 +9,7 @@ export default function MainLayout() {
       </header>
       <Outlet />
       <footer>
-        <a href="http://instagram">Instagram</a>
+        <a href="http://instagram.com">Instagram</a>
       </footer>
     </>
   );
